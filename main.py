@@ -91,7 +91,7 @@ def get_balance(token):
         response = requests.post(API_URL, data={"access_token": token})
         data = response.json()
         if data.get("status") == "success":
-            return f"User: {data['data']['user']}\nSố dư: {data['data']['sodu']} VNĐ\n"
+            return f"User: {data['data']['user']}\nSố dư: {data['data']['sodu']} coin\n"
         else:
             return "Token lỗi hoặc hết hạn!"
     except Exception:
